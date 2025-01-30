@@ -1,0 +1,18 @@
+@media (max-width: 768px) {
+    #menu {
+        display: none;
+    }
+}
+
+#hamburger {
+    display: block;
+    
+}
+
+#hamburger.active + #menu {
+    display: block;
+}
+
+#hamburger.active {
+    background: #ff0000; /* or change to highlight the active hamburger icon */
+}
