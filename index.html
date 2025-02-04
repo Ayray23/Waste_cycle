@@ -25,7 +25,7 @@
     </div>
     <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
       <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Home</a>
-      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Blog</a>
+      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./blog.html">Blog</a>
       <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">About</a>
       <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./Contact.html">Contact</a>
       <div @click.away="open = false" class="relative" x-data="{ open: false }">
@@ -35,9 +35,9 @@
         </button>
         <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
           <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
-            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Waste collection</a>
-            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Recycling and resource recovery</a>
-            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Hazardous waste management</a>
+            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./service.html">Waste collection</a>
+            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./service.html">Recycling and resource recovery</a>
+            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./service.html">Hazardous waste management</a>
           </div>
         </div>
       </div>    
@@ -97,9 +97,9 @@
                     <div class="mt-10 flex flex-col items-center md:flex-row">
                         <a href="/" class="mb-3 inline-flex h-12 w-full items-center justify-center rounded bg-green-600 px-6 font-medium tracking-wide text-white shadow-md transition hover:bg-blue-800 focus:outline-none md:mr-4 md:mb-0 md:w-auto">
                             View More</a>
-                            <a href="./Team1.jpg" aria-label="" class="group inline-flex items-center font-semibold text-g1">
-                                <video class="w-10 h-10" autoplay loop muted>
-                                    <source src="video.mp4" type="video/mp4">
+                            <a href="./Trendy Explainer Toolkit_free.mp4" aria-label="" class="group inline-flex items-center font-semibold text-g1">
+                                <video class="w-20 h-20" autoplay loop muted>
+                                    <source src="./Trendy Explainer Toolkit_free.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                                 Watch how it works
@@ -147,6 +147,40 @@
         </div>
     </section>
 
+
+    <section class="bg-gradient-to-r from-green-100 to-blue-50 py-20">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+          <h2 class="text-5xl font-extrabold text-gray-900 mb-6">
+              Our Sustainable Services 🌿
+          </h2>
+          <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+              Empowering industries with smart, sustainable recycling solutions that minimize waste and maximize efficiency.
+          </p>
+          <div class="mt-14 grid md:grid-cols-3 gap-10">
+              <div class="bg-white shadow-xl rounded-2xl p-8 transition-transform transform hover:scale-105">
+                  <div class="text-green-600 text-5xl mb-4">♻️</div>
+                  <h3 class="text-2xl font-bold text-gray-900">Industrial Waste Collection</h3>
+                  <p class="text-gray-700 mt-3">
+                      Safe and efficient waste collection with eco-friendly transportation to certified recycling centers.
+                  </p>
+              </div>
+              <div class="bg-white shadow-xl rounded-2xl p-8 transition-transform transform hover:scale-105">
+                  <div class="text-blue-600 text-5xl mb-4">📊</div>
+                  <h3 class="text-2xl font-bold text-gray-900">Recycling Consultation</h3>
+                  <p class="text-gray-700 mt-3">
+                      Expert advice on waste reduction, sustainable practices, and optimizing recycling efforts.
+                  </p>
+              </div>
+              <div class="bg-white shadow-xl rounded-2xl p-8 transition-transform transform hover:scale-105">
+                  <div class="text-green-700 text-5xl mb-4">🌍</div>
+                  <h3 class="text-2xl font-bold text-gray-900">Eco-Friendly Processing</h3>
+                  <p class="text-gray-700 mt-3">
+                      Advanced recycling techniques ensuring minimal environmental impact and responsible disposal.
+                  </p>
+              </div>
+          </div>
+      </div>
+  </section>
 
     <section class="max-w-6xl mx-auto pt-10 pb-36 px-8">
     
@@ -262,7 +296,131 @@
         
     </section>
 
-    
+    <section>
+     
+      
+      
+       <section>
+      <!-- footer -->
+<!-- <div class="flex items-end w-full min-h-screen bg-white"> -->
+  <!-- footer -->
+  <footer class="w-full text-gray-700 bg-gray-100 body-font">
+      <div
+          class="container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
+          <div class="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
+              <a class=" font-medium text-gray-900 title-font md:justify-start">
+                  <svg class="w-auto h-5 text-gray-900 fill-current" viewBox="0 0 202 69"
+                      xmlns="http://www.w3.org/2000/svg">
+                     </svg>
+                     <h1>EcoCycle</h1>
+              </a>
+              <p class="mt-2 text-sm text-gray-500">Design, Code and Ship!</p>
+              <div class="mt-4">
+                  <span class="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">
+                      <a class="text-gray-500 cursor-pointer hover:text-gray-700">
+                          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              class="w-5 h-5" viewBox="0 0 24 24">
+                              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                          </svg>
+                      </a>
+                      <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              class="w-5 h-5" viewBox="0 0 24 24">
+                              <path
+                                  d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                              </path>
+                          </svg>
+                      </a>
+                      <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                              stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                          </svg>
+                      </a>
+                      <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                              stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                              <path stroke="none"
+                                  d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                              </path>
+                              <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                          </svg>
+                      </a>
+                  </span>
+              </div>
+          </div>
+          <div class="flex flex-wrap flex-grow mt-10 -mb-10 text-center md:pl-20 md:mt-0 md:text-left">
+              <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                  <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">About</h2>
+                  <nav class="mb-10 list-none">
+                      <li class="mt-3">
+                          <a class="text-gray-500 cursor-pointer hover:text-gray-900">Company</a>
+                      </li>
+                      <li class="mt-3">
+                          <a class="text-gray-500 cursor-pointer hover:text-gray-900">Careers</a>
+                      </li>
+                      <li class="mt-3">
+                          <a class="text-gray-500 cursor-pointer hover:text-gray-900">Blog</a>
+                      </li>
+                  </nav>
+              </div>
+              <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                  <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">Support</h2>
+                  <nav class="mb-10 list-none">
+                      <li class="mt-3">
+                          <a class="text-gray-500 cursor-pointer hover:text-gray-900">Contact Support</a>
+                      </li>
+                      <li class="mt-3">
+                          <a class="text-gray-500 cursor-pointer hover:text-gray-900">Help Resources</a>
+                      </li>
+                      <li class="mt-3">
+                          <a class="text-gray-500 cursor-pointer hover:text-gray-900">Release Updates</a>
+                      </li>
+                  </nav>
+              </div>
+              <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                  <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">Platform
+                  </h2>
+                  <nav class="mb-10 list-none">
+                      <li class="mt-3">
+                          <a class="text-gray-500 cursor-pointer hover:text-gray-900">Terms &amp; Privacy</a>
+                      </li>
+                      <li class="mt-3">
+                          <a class="text-gray-500 cursor-pointer hover:text-gray-900">Pricing</a>
+                      </li>
+                      <li class="mt-3">
+                          <a class="text-gray-500 cursor-pointer hover:text-gray-900">FAQ</a>
+                      </li>
+                  </nav>
+              </div>
+              <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                  <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">Contact</h2>
+                  <nav class="mb-10 list-none">
+                      <li class="mt-3">
+                          <a class="text-gray-500 cursor-pointer hover:text-gray-900">Send a Message</a>
+                      </li>
+                      <li class="mt-3">
+                          <a class="text-gray-500 cursor-pointer hover:text-gray-900">Request a Quote</a>
+                      </li>
+                      <li class="mt-3">
+                          <a class="text-gray-500 cursor-pointer hover:text-gray-900">+123-456-7890</a>
+                      </li>
+                  </nav>
+              </div>
+          </div>
+      </div>
+      <div class="bg-gray-300">
+          <div class="container px-5 py-4 mx-auto">
+              <p class="text-sm text-gray-700 capitalize xl:text-center">© Echostech:All rights reserved </p>
+          </div>
+      </div>
+  </footer>
+
+</div>
+    </section>
+      
+  </section>
     
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - EcoCycle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <div class="w-full sticky top-0 z-50 text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
+        <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+          <div class="p-4 flex flex-row items-center justify-between">
+            <a href="./index.html" class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">Ecocyle</a>
+            <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+              <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+              </svg>
+            </button>
+          </div>
+          <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+            <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./index.html">Home</a>
+            <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./blog.html">Blog</a>
+            <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./Aboutus.html">About</a>
+            <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./Contact.html">Contact</a>
+            <div @click.away="open = false" class="relative" x-data="{ open: false }">
+              <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                <span>Service</span>
+                 <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg> 
+              </button>
+              <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+                <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+                  <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./service.html">Waste collection</a>
+                  <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./service.html">Recycling and resource recovery</a>
+                  <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="./service.html">Hazardous waste management</a>
+                </div>
+              </div>
+            </div>    
+          </nav>
+        </div>
+      </div>
+          
+
+    <!-- About Us Section -->
+    <section class="pt-24 pb-16 bg-white">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="flex flex-col-reverse lg:flex-row items-center">
+                <!-- Text Content -->
+                <div class="lg:w-1/2 text-center lg:text-left">
+                    <p class="text-sm uppercase text-green-600 font-bold">About Us</p>
+                    <h2 class="text-3xl font-bold text-gray-900 mt-4">
+                        We Recycle Your <span class="border-b-4 border-green-500">Waste Differently</span>
+                    </h2>
+                    <p class="text-gray-700 mt-4 leading-relaxed">
+                        At EcoCycle, we are committed to a greener future by turning waste into valuable resources. 
+                        We connect households and businesses with local recycling solutions, reducing landfill waste and promoting sustainability. 
+                        Through awareness, innovation, and collaboration, we make recycling easy and impactful.
+                    </p>
+                    <p class="text-gray-700 mt-2">Join us in creating a cleaner planet—every action counts!♻️🌍</p>
+                    <div class="mt-6 flex flex-col md:flex-row items-center">
+                        <a href="#" class="mb-3 inline-flex h-12 px-6 text-white bg-green-600 rounded-lg shadow-md hover:bg-green-700 transition">
+                            Learn More
+                        </a>
+                        <a href="./Trendy Explainer Toolkit_free.mp4" class="ml-4 flex items-center text-green-600 font-semibold hover:text-green-800">
+                           
+                            <span class="ml-2">Watch How It Works</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Image -->
+                <div class="lg:w-1/2 flex justify-center">
+                    <video class="w-50 h-50" autoplay loop muted>
+                        <source src="./Trendy Explainer Toolkit_free.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Mission Section -->
+    <section class="bg-green-600 text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold">Our Mission</h2>
+            <p class="mt-4 text-lg leading-relaxed">
+                EcoCycle is dedicated to creating a sustainable future through responsible waste management and recycling. 
+                We aim to educate, empower, and inspire individuals and businesses to make eco-friendly choices that contribute 
+                to a cleaner environment.
+            </p>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-900">Why Choose EcoCycle?</h2>
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-lg font-semibold text-green-600">Innovative Solutions</h3>
+                    <p class="mt-2 text-gray-700">We use technology to make recycling easy, efficient, and rewarding.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-lg font-semibold text-green-600">Eco-Friendly Impact</h3>
+                    <p class="mt-2 text-gray-700">Our efforts help reduce landfill waste and promote a cleaner environment.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-lg font-semibold text-green-600">Community Driven</h3>
+                    <p class="mt-2 text-gray-700">We work closely with local businesses and households to drive sustainability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-gray-900">Get in Touch</h2>
+            <p class="mt-4 text-gray-700">Have questions or want to partner with us? Reach out today.</p>
+            <a href="./Contact.html" class="mt-6 inline-block px-6 py-3 text-white bg-green-600 rounded-lg shadow-md hover:bg-green-700 transition">
+                Contact Us
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- footer -->
+  <footer class="w-full text-gray-700 bg-gray-100 body-font">
+    <div
+        class="container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
+        <div class="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
+            <a class=" font-medium text-gray-900 title-font md:justify-start">
+                <svg class="w-auto h-5 text-gray-900 fill-current" viewBox="0 0 202 69"
+                    xmlns="http://www.w3.org/2000/svg">
+                   </svg>
+                   <h1>EcoCycle</h1>
+            </a>
+            <p class="mt-2 text-sm text-gray-500">Design, Code and Ship!</p>
+            <div class="mt-4">
+                <span class="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">
+                    <a class="text-gray-500 cursor-pointer hover:text-gray-700">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-5 h-5" viewBox="0 0 24 24">
+                            <path
+                                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path stroke="none"
+                                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                            </path>
+                            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                        </svg>
+                    </a>
+                </span>
+            </div>
+        </div>
+        <div class="flex flex-wrap flex-grow mt-10 -mb-10 text-center md:pl-20 md:mt-0 md:text-left">
+            <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">About</h2>
+                <nav class="mb-10 list-none">
+                    <li class="mt-3">
+                        <a class="text-gray-500 cursor-pointer hover:text-gray-900">Company</a>
+                    </li>
+                    <li class="mt-3">
+                        <a class="text-gray-500 cursor-pointer hover:text-gray-900">Careers</a>
+                    </li>
+                    <li class="mt-3">
+                        <a class="text-gray-500 cursor-pointer hover:text-gray-900">Blog</a>
+                    </li>
+                </nav>
+            </div>
+            <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">Support</h2>
+                <nav class="mb-10 list-none">
+                    <li class="mt-3">
+                        <a class="text-gray-500 cursor-pointer hover:text-gray-900">Contact Support</a>
+                    </li>
+                    <li class="mt-3">
+                        <a class="text-gray-500 cursor-pointer hover:text-gray-900">Help Resources</a>
+                    </li>
+                    <li class="mt-3">
+                        <a class="text-gray-500 cursor-pointer hover:text-gray-900">Release Updates</a>
+                    </li>
+                </nav>
+            </div>
+            <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">Platform
+                </h2>
+                <nav class="mb-10 list-none">
+                    <li class="mt-3">
+                        <a class="text-gray-500 cursor-pointer hover:text-gray-900">Terms &amp; Privacy</a>
+                    </li>
+                    <li class="mt-3">
+                        <a class="text-gray-500 cursor-pointer hover:text-gray-900">Pricing</a>
+                    </li>
+                    <li class="mt-3">
+                        <a class="text-gray-500 cursor-pointer hover:text-gray-900">FAQ</a>
+                    </li>
+                </nav>
+            </div>
+            <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">Contact</h2>
+                <nav class="mb-10 list-none">
+                    <li class="mt-3">
+                        <a class="text-gray-500 cursor-pointer hover:text-gray-900">Send a Message</a>
+                    </li>
+                    <li class="mt-3">
+                        <a class="text-gray-500 cursor-pointer hover:text-gray-900">Request a Quote</a>
+                    </li>
+                    <li class="mt-3">
+                        <a class="text-gray-500 cursor-pointer hover:text-gray-900">+123-456-7890</a>
+                    </li>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="bg-gray-300">
+        <div class="container px-5 py-4 mx-auto">
+            <p class="text-sm text-gray-700 capitalize xl:text-center">© Echostech:All rights reserved </p>
+        </div>
+    </div>
+</footer>
+
+</div>
+  </section>
+    
+</section>
+  
+      <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+
+</body>
+</html>
